@@ -5,24 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Аттестация ГПК (30 билетов)</title>
     <style>
-        body { font-family: sans-serif; background: #f0f4f8; margin: 0; padding: 20px; color: #333; }
-        .container { max-width: 500px; margin: 0 auto; text-align: center; }
-        .card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 20px; }
-        h1 { color: #0056b3; font-size: 24px; margin-bottom: 5px; }
-        input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box; }
-        button { width: 100%; padding: 15px; background: #0056b3; color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 16px; }
-        button:active { background: #004494; }
-        button:disabled { opacity: 0.6; cursor: not-allowed; }
-        .hidden { display: none; }
-        .ans-btn { background: #f8fafc; border: 1px solid #ddd; padding: 15px; margin-bottom: 10px; width: 100%; text-align: left; border-radius: 10px; cursor: pointer; }
-        .ans-btn:hover:not(:disabled) { border-color: #0056b3; background: #ebf4ff; }
-        .progress-bar { background: #e0e6ed; height: 8px; border-radius: 4px; margin-bottom: 20px; overflow: hidden; }
-        .progress-fill { background: #0056b3; height: 100%; width: 0%; transition: 0.3s; }
-        #res-score { font-size: 60px; font-weight: bold; color: #0056b3; margin: 20px 0; }
-        .flash-red { background: #fee2e2 !important; transition: 0.3s; }
-        .correct-highlight { background-color: #bbf7d0 !important; border-color: #22c55e !important; }
-        .wrong-highlight { background-color: #fee2e2 !important; border-color: #ef4444 !important; }
-    </style>
+    body { font-family: sans-serif; background: #f0f4f8; margin: 0; padding: 20px; color: #333; }
+    .container { max-width: 500px; margin: 0 auto; text-align: center; }
+    .card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 20px; }
+    h1 { color: #0056b3; font-size: 24px; margin-bottom: 5px; }
+    input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box; }
+    /* Основной стиль для всех кнопок (кроме .ans-btn) */
+    button:not(.ans-btn) { width: 100%; padding: 15px; background: #0056b3; color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 16px; }
+    button:not(.ans-btn):active { background: #004494; }
+    button:disabled { opacity: 0.6; cursor: not-allowed; }
+    .hidden { display: none; }
+    /* Стили для кнопок-ответов */
+    .ans-btn { background: #f8fafc; border: 1px solid #ddd; padding: 15px; margin-bottom: 10px; width: 100%; text-align: left; border-radius: 10px; cursor: pointer; color: #1e293b; }
+    .ans-btn:hover:not(:disabled) { border-color: #0056b3; background: #ebf4ff; color: #1e293b; }
+    .progress-bar { background: #e0e6ed; height: 8px; border-radius: 4px; margin-bottom: 20px; overflow: hidden; }
+    .progress-fill { background: #0056b3; height: 100%; width: 0%; transition: 0.3s; }
+    #res-score { font-size: 60px; font-weight: bold; color: #0056b3; margin: 20px 0; }
+    .flash-red { background: #fee2e2 !important; transition: 0.3s; }
+    .correct-highlight { background-color: #bbf7d0 !important; border-color: #22c55e !important; color: #1e293b !important; }
+    .wrong-highlight { background-color: #fee2e2 !important; border-color: #ef4444 !important; color: #1e293b !important; }
+</style>
 </head>
 <body id="main-body">
 
@@ -262,3 +264,4 @@ function finish() {
 </html>
 
 ```
+
